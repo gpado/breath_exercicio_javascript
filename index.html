@@ -8,54 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-    <title>Document</title>
+    <title>Breath - Exercício de Respiração</title>
 </head>
 <body>
     <h1>Exercicio de Respiração</h1>
 
-<div>
+  <div>
+    <canvas id="Canvas" width="400" height="230"></canvas>
 
-<canvas id="Canvas" width="400" height="230"></canvas>
+    <button class="button">Respirar</button>
+  </div>
 
-<button class="button">Respirar</button>
-</div>
-
-<script>
-  var canvas = document.getElementById('Canvas');
-  var context = canvas.getContext('2d');
-  var centerX = canvas.width / 2;
-  var centerY = canvas.height / 2;
-  var radius = 100;
-
-  context.beginPath();
-  context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-  context.fillStyle = '#222992'; //cor circulo   
-  context.fill();
-  context.lineWidth = 0;  //borda circulo 
-
-
-</script>
-
-
-
-</body>
-<script>
-    $(document).ready(function(){
-      $("button").click(function(){
-        $("canvas").css("animation", "mymove 8s infinite");
-      });
-    });
-</script>
+  <script src="src/index.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
