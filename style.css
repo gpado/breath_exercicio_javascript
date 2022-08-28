@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto';font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  canvas {
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    position: relative;
+  }
+
+  @keyframes mymove{
+0% {
+  opacity:0;
+  transform:  rotate(0deg) scaleX(0) scaleY(0) ;
+}
+50% {
+  opacity:1;
+  transform:  rotate(0deg) scaleX(1.2) scaleY(1.2) ;
+}
+100% {
+  opacity:0;
+  transform:  rotate(0deg) scaleX(0) scaleY(0) ;
+}
+}
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #222992;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin: 0 auto;
+    display: block;
+    margin-top: 4%;
+  }
+
+  .button:hover {
+    background-color: #2a33b1;
+  }
+
+  .button:active {
+    background-color: #181e6b;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
+  div{
+    margin: 0 auto;
+    margin-top: 3%;
+    padding-bottom: 30px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
