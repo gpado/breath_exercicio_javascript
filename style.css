@@ -7,7 +7,6 @@ body {
   canvas {
     margin: 0 auto;
     display: block;
-    margin-top: 30px;
     position: relative;
   }
 
@@ -18,14 +17,14 @@ body {
 }
 50% {
   opacity:1;
-  transform:  rotate(0deg) scaleX(1.2) scaleY(1.2) ;
+  transform:  rotate(0deg) scaleX(1) scaleY(1) ;
 }
 100% {
   opacity:0;
   transform:  rotate(0deg) scaleX(0) scaleY(0) ;
 }
 }
-  .button {
+  button{
     display: inline-block;
     padding: 15px 25px;
     font-size: 24px;
@@ -33,22 +32,26 @@ body {
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
-    background-color: #222992;
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+    background-color: #00000000;
     margin: 0 auto;
     display: block;
     margin-top: 4%;
   }
 
-  .button:hover {
-    background-color: #2a33b1;
+  #actionButtons button{
+    color: #fff;
+    background-color: #596cb3;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
   }
 
-  .button:active {
-    background-color: #181e6b;
+  #actionButtons button:hover {
+    background-color: #9090cb;
+  }
+
+  #actionButtons button:active {
+    background-color: #818cb5;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }

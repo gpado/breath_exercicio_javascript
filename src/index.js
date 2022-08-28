@@ -14,6 +14,8 @@ const game = {
             }
         }
 
+        breathInterface.initialize();
+
         game.draw();
     },
 
@@ -32,15 +34,61 @@ const game = {
 const breathInterface = {
     circle: {
         radius: 100,
-        bgColor: "#222992",
+        bgColor: "#596cb3",
         border: 0
+    },
+
+    initialize: () => {
+        let btnToggle = $("#btnToggle");
+        let btnStart = $("#btnStart");
+        let btnPause = $("#btnPause");
+        let btnResume = $("#btnResume");
+        let btnCancel = $("#btnCancel");
+
+        btnToggle.click( () => {
+            let symbolOfButton = (btnToggle.html() === "˅") ? "˄" : "˅";
+            btnToggle.html(symbolOfButton);
+        });
+
+        btnPause.css("display", "none");
+        btnResume.css("display", "none");
+
+        btnStart.click( () => {
+            breathInterface.playAnimation();
+            btnStart.css("display", "none");
+            btnPause.css("display", "inline");
+        });
+        btnResume.click( () => {
+            breathInterface.playAnimation();
+            btnResume.css("display", "none");
+            btnPause.css("display", "inline");
+        });
+        btnPause.click( () => {
+            breathInterface.pauseAnimation();
+            btnPause.css("display", "none");
+            btnResume.css("display", "inline");
+        });
+        btnCancel.click( () => {
+            breathInterface.cancelAnimation();
+            btnStart.css("display", "initial");
+            btnPause.css("display", "none");
+            btnResume.css("display", "none");
+        });
+    },
+
+    playAnimation: () => {
+        $("canvas").css("animation", "mymove 8s infinite");
+    },
+
+    pauseAnimation: () => {
+        $("canvas").css("animation", "");
+    },
+
+    cancelAnimation: () => {
+        $("canvas").css("animation", "");
     }
 }
 
 $(document).ready(function(){
     game.initialize();
-    
-    $("button").click(function(){
-      $("canvas").css("animation", "mymove 8s infinite");
-    });
-  });
+});
