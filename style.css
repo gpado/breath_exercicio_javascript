@@ -11,19 +11,26 @@ body {
     max-width: 400px;
   }
 
-  @keyframes mymove{
-0% {
-  opacity:0;
-  transform:  rotate(0deg) scaleX(0) scaleY(0) ;
+@keyframes inspire{
+  0% {
+    opacity:0;
+    transform:  rotate(0deg) scaleX(0) scaleY(0) ;
+  }
+  100% {
+    opacity:1;
+    transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+  }
+
 }
-50% {
-  opacity:1;
-  transform:  rotate(0deg) scaleX(1) scaleY(1) ;
-}
-100% {
-  opacity:0;
-  transform:  rotate(0deg) scaleX(0) scaleY(0) ;
-}
+@keyframes expire{
+  0% {
+    opacity:1;
+    transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+  }
+  100% {
+    opacity:0;
+    transform:  rotate(0deg) scaleX(0) scaleY(0) ;
+  }
 }
   button{
     display: inline-block;
