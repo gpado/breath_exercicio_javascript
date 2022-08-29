@@ -12,15 +12,16 @@
     <title>Breath - Exercício de Respiração</title>
 </head>
 <body>
-    <div class="container-fluid vh-100 p-0 d-flex flex-column justify-content-around">
-      <canvas class="w-100" id="Canvas" height="230"></canvas>
+    <div class="container-fluid mt-0 vh-100 p-0 d-flex flex-column justify-content-center">
+      <canvas class="w-100" id="firstCanvasLayer" height="230"></canvas>
+      <canvas class="w-100 position-absolute top-50 start-50 translate-middle" id="secondCanvasLayer" height="280"></canvas>
     </div>
 
     <div class="container-fluid fixed-bottom text-center pb-4">
         <button id="btnToggle" data-bs-toggle="collapse" data-bs-target="#actionButtons" aria-expanded="false" aria-controls="collapseExample">
           ˄
         </button>
-        <div class="collapse row justify-content-around mt-3" id="actionButtons">
+        <div class="collapse row justify-content-around mt-3 show" id="actionButtons">
             <div class="col-5 col-md-3">
               <button class="w-100" id="btnStart">Começar</button>
               <button class="w-100" id="btnPause">Pausar</button>
