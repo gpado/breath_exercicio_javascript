@@ -60,5 +60,16 @@ button{
 
 
 .titulo{
-  margin-top: 70px;
+  margin-top: 30px;
+}
+
+img{
+  padding-top: 70px;
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+}
+
+main{
+  margin-bottom: 20px;
 }

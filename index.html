@@ -1,38 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Incluindo arquivos jQuery mobile -->
+    <script type="text/javascript" src="mobile/jquery-2.1.3.min.js"></script>
+
+    <!-- Jquery Mobile -->
+    <link rel="stylesheet" href="mobile/jquery.mobile-1.4.5.min.css">
+    <script type="text/javascript" src="mobile/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <title>Breath - Exercício de Respiração</title>
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+
+    <title>BREATH Manual</title>
+
 </head>
+
 <body>
-    <div class="container-fluid mt-0 vh-100 p-0 d-flex flex-column justify-content-center">
-      <canvas class="w-100" id="firstCanvasLayer" height="230"></canvas>
-      <canvas class="w-100 position-absolute top-50 start-50 translate-middle" id="secondCanvasLayer" height="280"></canvas>
+
+    <!-- Comeco Cabeçalho -->
+    <div data-position="fixed" data-theme="b" role="banner" class="ui-header ui-bar-b ui-header-fixed slidedown">
+        <h1 class="ui-title" role="heading" aria-level="1">BREATH</h1>
+
+        <a href="#popupCloseRight" data-rel="popup"
+            class="ui-link ui-btn-left ui-btn ui-icon-comment ui-btn-icon-notext ui-shadow ui-corner-all"></a>
+        <a href="#popupMenu" data-rel="popup" data-transition="slideup"
+            class="ui-link ui-btn-right ui-btn ui-icon-bullets ui-btn-icon-notext ui-shadow ui-corner-all">Actions...
+            <span class="ui-icon ui-icon-gear"></span></a>
+
     </div>
 
-    <div class="container-fluid fixed-bottom text-center pb-4">
-        <button id="btnToggle" data-bs-toggle="collapse" data-bs-target="#actionButtons" aria-expanded="false" aria-controls="collapseExample">
-          ˄
-        </button>
-        <div class="collapse row justify-content-around mt-3 show" id="actionButtons">
-            <div class="col-5 col-md-3">
-              <button class="w-100" id="btnStart">Começar</button>
-              <button class="w-100" id="btnPause">Pausar</button>
-              <button class="w-100" id="btnResume">Retomar</button>
-            </div>
-            <div class="col-5 col-md-3">
-                <button class="w-100" id="btnCancel">Cancelar</button>
-            </div>
+    </div>
+    <!-- Fim Cabeçalho -->
+
+
+
+    <!-- Pagina Principal -->
+
+    <main role="main" class="ui-content">
+
+        <a href="#">
+            <img src="img/logo.svg" />
+        </a>
+
+        <h3 class="titulo">
+            MANUAL DE USO:
+        </h3>
+        <p>
+            Para melhor aproveitamento do usuário é indicado que responda corretamente o questionário após o login para que o jogo se calibre conforme suas necessidades. 
+        </p>
+
+        <p>
+            Breath é um jogo que com técnicas de respiração pretende te acalmar durante crises de ansiedade e não tem restrições de idades. 
+        </p>
+
+        <p>
+            As técnicas de respiração inspiradas e corroboradas por artes como yoga e artigos médicos. 
+        </p>
+
+        <p>
+            Para surgir um efeito maior o indicado é colocar os fones e se concentrar nos sons dos jogos e seguir as posições e posturas indicadas.  
+        </p>
+
+        <p>
+            O Breath não é um substituto para remedidos e tratamentos, não deixe de seguir as orientações dos seus médicos.
+        </p>
+        <h4>
+         REGRAS:
+        </h4>
+        <p>
+            1.	O Breath não permite que você pule etapas.
+        </p>
+        <p>
+            2.	É possível voltar quaisquer telas, mas não se pode avançar sem fazer a atividade proposta até o fim.
+        </p>
+        <p>
+            3.	O sistema de pontos te bonifica pelas pequenas conquistas, e não pode ser visto por outros jogadores, não existe rank.
+        </p>
+        <p>
+            4.	nosso objetivo é acalmar e te levar para um espaço seguro. 
+        </p>
+        <p>
+            5.	Aproveite a experiencia e o tempo ela leva para te acalmar. 
+        </p>
+    </main>
+
+
+    <!-- Rodape -->
+    <footer data-role="footer" style=" position:absolute; bottom:0; width:100%;">
+        <div class="text-center" style="font-size: 80%;">
+            © 2022 Copyright:
+            <a href="https://github.com/gpado/breath_exercicio_javascript"> ALUNOS FIAP</a>
         </div>
+    </footer>
+
+
+    <!-- Popup das Menu -->
+    <div data-role="popup" id="popupMenu" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">Escolha uma Opção:</li>
+            <form onsubmit="return saude()"> </form>
+
+            <li><a href="game.html" data-ajax="false">Game</a></li>
+        </ul>
     </div>
 
+
+    <!-- Popup das Informações -->
+    <div data-role="popup" id="popupCloseRight" class="ui-content" style="max-width:280px">
+        <a href="#" data-rel="back"
+            class="ui-link ui-btn-right ui-btn ui-icon-delete ui-btn-icon-notext ui-shadow ui-corner-all">Fechar <span
+                class="ui-icon ui-icon-delete"></span></a>
+        <p>* Para maior resultado faça os exercícios várias vezes.</p>
+    </div>
+
+
+
+    <!-- Link Javascript -->
     <script src="js/index.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
+</body>
+
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Breath - Exercício de Respiração</title>
+</head>
+<body>
+    <div class="container-fluid mt-0 vh-100 p-0 d-flex flex-column justify-content-center">
+      <canvas class="w-100" id="firstCanvasLayer" height="230"></canvas>
+      <canvas class="w-100 position-absolute top-50 start-50 translate-middle" id="secondCanvasLayer" height="280"></canvas>
+    </div>
+
+    <div class="container-fluid fixed-bottom text-center pb-4">
+        <button id="btnToggle" data-bs-toggle="collapse" data-bs-target="#actionButtons" aria-expanded="false" aria-controls="collapseExample">
+          ˄
+        </button>
+        <div class="collapse row justify-content-around mt-3 show" id="actionButtons">
+            <div class="col-5 col-md-3">
+              <button class="w-100" id="btnStart">Começar</button>
+              <button class="w-100" id="btnPause">Pausar</button>
+              <button class="w-100" id="btnResume">Retomar</button>
+            </div>
+            <div class="col-5 col-md-3">
+                <button class="w-100" id="btnCancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
